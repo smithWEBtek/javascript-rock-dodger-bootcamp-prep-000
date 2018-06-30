@@ -135,6 +135,7 @@ var left=positionToInteger(DODGER.style.left)
 
 function moveDodgerRight() {
    window.requestAnimationFrame(function () {
+     
    var left=positionToInteger(DODGER.style.left) 
    var right=left+DODGER.style.width
     if (right < GAME_WIDTH) {
