@@ -136,7 +136,7 @@ function moveDodgerRight() {
     if (right < GAME_WIDTH) {
       DODGER.style.left = `${left + 4}px`
     }
-}
+}  
 
 function positionToInteger(p) {
   var ans=parseInt(p.split('px')[0]) || 0
