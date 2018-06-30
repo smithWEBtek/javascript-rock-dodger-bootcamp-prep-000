@@ -134,12 +134,14 @@ var left=positionToInteger(DODGER.style.left)
 }
 
 function moveDodgerRight() {
+   window.requestAnimationFrame(function () {
    var left=positionToInteger(DODGER.style.left) 
    var right=left+DODGER.style.width
     if (right < GAME_WIDTH) {
       DODGER.style.left = `${left + 4}px`
     }
-}  
+})
+}
 
 function positionToInteger(p) {
   var ans=parseInt(p.split('px')[0]) || 0
