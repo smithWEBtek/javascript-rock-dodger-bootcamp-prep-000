@@ -126,15 +126,15 @@ function moveDodger(e) {
 function moveDodgerLeft() {
 var left=positionToInteger(DODGER.style.left)  
   if (left > 0) {
-    dodger.style.left = `${left - 4}px`
+    DODGER.style.left = `${left - 4}px`
   }
 }
 
 function moveDodgerRight() {
-   var left=positionToInteger(dodger.style.left) 
-   var right=left+dodger.style.width
+   var left=positionToInteger(DODGER.style.left) 
+   var right=left+DODGER.style.width
     if (right < GAME_WIDTH) {
-    dodger.style.left = `${left + 4}px`
+      DODGER.style.left = `${left + 4}px`
     }
 }
 
