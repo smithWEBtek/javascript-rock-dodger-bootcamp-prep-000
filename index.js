@@ -111,38 +111,37 @@ function endGame() {
 }
 
 function moveDodger(e) {
-  // implement me!
-  /**
-   * This function should call `moveDodgerLeft()`
-   * if the left arrow is pressed and `moveDodgerRight()`
-   * if the right arrow is pressed. (Check the constants
-   * we've declared for you above.)
-   * And be sure to use the functions declared below!
-   */
+   document.addEventListener('keydown', function(e) {
+  if (e.which === LEFT_ARROW) {
+    console.log('l')
+ 
+      window.requestAnimationFrame(moveDodgerLeft)
+  }
+  if (e.which === RIGHT_ARROW) {
+    console.log('r')
+      window.requestAnimationFrame(moveDodgerRight)
+  }
+})
 }
 
 function moveDodgerLeft() {
-  // implement me!
-  /**
-   * This function should move DODGER to the left
-   * (mabye 4 pixels?). Use window.requestAnimationFrame()!
-   */
+var left=positionToInteger(dodger.style.left)  
+  if (left > 0) {
+    dodger.style.left = `${left - 4}px`
+  }
 }
 
 function moveDodgerRight() {
-  // implement me!
-  /**
-   * This function should move DODGER to the right
-   * (mabye 4 pixels?). Use window.requestAnimationFrame()!
-   */
+   var left=positionToInteger(dodger.style.left) 
+   var right=left+dodger.style.width
+    if (right < GAME_WIDTH) {
+    dodger.style.left = `${left + 4}px`
+    }
 }
 
-/**
- * @param {string} p The position property
- * @returns {number} The position as an integer (without 'px')
- */
 function positionToInteger(p) {
-  return parseInt(p.split('px')[0]) || 0
+  var ans=parseInt(p.split('px')[0]) || 0
+  return ans
 }
 
 function start() {
