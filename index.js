@@ -114,10 +114,14 @@ function moveDodger(e) {
    document.addEventListener('keydown', function(e) {
   if (e.which === LEFT_ARROW) {
     console.log('l')
+      e.stopPropagation();
+      e.preventDefault();
  moveDodgerLeft()
   }
   if (e.which === RIGHT_ARROW) {
     console.log('r')
+      e.stopPropagation();
+      e.preventDefault();
     moveDodgerRight()
   }
 })
