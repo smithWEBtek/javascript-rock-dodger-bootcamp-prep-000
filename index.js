@@ -122,7 +122,7 @@ function moveDodger(e) {
     console.log('r')
       e.stopPropagation();
       e.preventDefault();
-    moveDodgerRight()
+      moveDodgerRight()
   }
 })
 }
